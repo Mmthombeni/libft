@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/01 14:35:07 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/10 02:43:15 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/22 06:54:10 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
 
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
 int		ft_atoi(const char *str);
 
 int		ft_isalpha(int c);
@@ -48,6 +53,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void	ft_memdel(void **ap);
 
 void	ft_bzero(void *s, size_t n);
 
@@ -55,5 +61,9 @@ void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl(char const *str);
 void	ft_putendl_fd(char const *str, int fd);
+void	ft_putstr(char const *s);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

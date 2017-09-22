@@ -6,11 +6,11 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/23 01:27:29 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/06/23 01:32:08 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/15 20:39:01 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
 void	*ft_memalloc(size_t size)
 {
