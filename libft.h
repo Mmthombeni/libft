@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/01 14:35:07 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/23 01:39:34 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/23 05:26:37 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,14 @@ int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 
 int		ft_atoi(const char *str);
+char	*ft_itoa(int n);
 
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
