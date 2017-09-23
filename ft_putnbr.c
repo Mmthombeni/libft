@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/22 04:09:26 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/22 04:26:29 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/22 20:13:46 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr(int n)
 	num = n;
 	if (num < 0)
 	{
-		ft_putchaar('-');
+		ft_putchar('-');
 		num = -num;
 	}
 	if (num >= 10)

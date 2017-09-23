@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/01 14:35:07 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/22 06:54:10 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/23 01:39:34 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strnew(size_t size);
+char	*ft_strjoin(char const *s1, char const *s2);
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 
 int		ft_atoi(const char *str);
 

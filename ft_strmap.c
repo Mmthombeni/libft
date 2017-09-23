@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/23 00:59:56 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/23 01:33:38 by mmthombe         ###   ########.fr       */
+/*   Created: 2017/09/22 20:32:14 by mmthombe          #+#    #+#             */
+/*   Updated: 2017/09/22 20:42:30 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*str;
+	char	*new;
 	size_t	i;
 
 	i = 0;
-	str = (char *)malloc(sizeof(char) * (size + 1));
-	if (!str)
+	if (!f || !s)
 		return (NULL);
-	while (i <= size + 1)
+	new = ft_strdup(s);
+	if (new == NULL)
+		return (NULL);
+	while (s[i])
 	{
-		str[i] = '\0';
+		new[i] = f(s[i]);
 		i++;
 	}
-	return (str);
+	new[i] = '\0';
+	return (new);
 }

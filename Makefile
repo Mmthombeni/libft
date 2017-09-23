@@ -6,7 +6,7 @@
 #    By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/10 10:59:46 by mmthombe          #+#    #+#              #
-#    Updated: 2017/09/22 06:54:45 by mmthombe         ###   ########.fr        #
+#    Updated: 2017/09/23 01:43:34 by mmthombe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,17 +20,19 @@ SRC = ft_strchr.c ft_strcat.c ft_strncat.c ft_strcmp.c ft_strncmp.c \
 	  ft_putchar_fd.c ft_memdel.c ft_memmove.c ft_putchar.c ft_putendl.c \
 	  ft_putendl_fd.c ft_memalloc.c ft_memccpy.c ft_strdel.c ft_strclr.c\
 	  ft_putstr.c ft_putstr_fd.c ft_putnbr.c ft_putnbr_fd.c ft_striter.c\
-	  ft_striteri.c \
+	  ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c ft_strnew.c \
+	  ft_strjoin.c \
 
 OBJ = ft_strchr.o ft_strcat.o ft_strncat.o ft_strcmp.o ft_strncmp.o \
 	  ft_strcpy.o ft_strncpy.o ft_strdup.o ft_strstr.o ft_strnstr.o \
 	  ft_strlen.o ft_strrchr.o ft_isalpha.o ft_isdigit.o ft_isalnum.o \
 	  ft_isprint.o ft_isascii.o ft_tolower.o ft_toupper.o ft_atoi.o \
 	  ft_memset.o ft_memcpy.o ft_memcmp.o ft_memchr.o ft_bzero.o ft_strlcat.o \
-	  ft_putchar_fd.o ft_m_mdel.o ft_memmove.o ft_putchar.o ft_putendl.o \
+	  ft_putchar_fd.o ft_memdel.o ft_memmove.o ft_putchar.o ft_putendl.o \
 	  ft_putendl_fd.o ft_memalloc.o ft_memccpy.o ft_strdel.o ft_strclr.o \
 	  ft_putstr.o ft_putstr_fd.o ft_putnbr.o ft_putnbr_fd.o ft_striter.o \
-	  ft_striteri.o \
+	  ft_striteri.o ft_strmap.o ft_strmapi.o ft_strequ.o ft_strnew.o \
+	  ft_strjoin.o \
 
 FLS = -Wall -Wextra -Werror
 
