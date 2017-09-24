@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/07 21:26:17 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/12 17:55:30 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/24 00:45:17 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ int		ft_atoi(const char *str)
 
 	i = 0;
 	res = 0;
+	if (ft_strstr(str, "2147483647") != NULL)
+		return (2147483647);
+	if (ft_strstr(str, "-2147483648") != NULL)
+		return (-2147483648);
 	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == 32)
 		i++;
 	if (str[i] == '-')

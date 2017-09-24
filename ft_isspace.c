@@ -6,16 +6,15 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 03:42:15 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/23 03:46:12 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/23 20:09:06 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isspace(int c)
+int		ft_isspace(char c)
 {
-	if (c == 32)
+	if (c == ' ' || c == '\t' || c == '\n')
 		return (1);
-	else
-		return (0);
+	return (0);
 }

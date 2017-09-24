@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/01 14:35:07 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/23 05:26:37 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/24 02:08:24 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strnew(size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 
@@ -50,7 +53,10 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-int		ft_isspace(int c);
+int		ft_isspace(char c);
+
+int		ft_wordlen(char *s, char c);
+int		ft_wordcount(char *s, char c);
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);

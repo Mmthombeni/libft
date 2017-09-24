@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/04 00:48:23 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/23 22:14:35 by mmthombe         ###   ########.fr       */
+/*   Created: 2017/09/23 18:48:38 by mmthombe          #+#    #+#             */
+/*   Updated: 2017/09/23 22:01:43 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strtrim(char const *s)
 {
-	int i;
-	int j;
+	size_t	start;
+	size_t	end;
+	size_t	len;
 
-	i = 0;
-	while (i < (int)len && big[i] != '\0')
+	start = 0;
+	len = 0;
+	if (s != NULL)
 	{
-		j = 0;
-		if (little[j] == '\0')
-			return ((char*)(&big[i]));
-		while (big[i + j] == little[j])
-		{
-			if (little[j + 1] == '\0')
-				return ((char*)(&big[i]));
-			j++;
-		}
-		i++;
+		while (start < ft_strlen(s) && ft_isspace(s[start]))
+			start++;
+		end = ft_strlen(s) - 1;
+		while (end > start && ft_isspace(s[end]))
+			end--;
+		len = end - start + 1;
 	}
-	return (0);
+	return (ft_strsub(s, start, len));
 }

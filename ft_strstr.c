@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/03 14:44:54 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/06/23 02:01:06 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/23 22:05:51 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strstr(const char *big, const char *little)
 	int j;
 
 	i = 0;
+	if (ft_strlen((char *)little) == 0)
+		return ((char *)big);
 	while (big[i] != '\0')
 	{
 		j = 0;
