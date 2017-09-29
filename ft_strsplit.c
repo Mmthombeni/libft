@@ -6,32 +6,78 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 01:01:30 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/24 02:09:01 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/28 21:10:13 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int		ft_wordlen(char const *s, char c)
+{
+	int		letter;
+	int		i;
+
+	letter = 0;
+	i = 0;
+	while (s[i] != c && s[i] != '\0')
+	{
+		i++;
+		letter++;
+	}
+	return (letter);
+}
+
+static int		ft_wordcount(char const *s, char *c)
+{
+	int		i;
+	int		j;
+	int		word;
+
+	i = 0;
+	j = 0;
+	word = 0;
+	if (ft_strstr(s, c) == NULL)
+		return (1);
+	while (s[i])
+	{
+		while (s[i] != c[0] && s[i])
+		{
+			j++;
+			i++;
+		}
+		if (j != 0 && ((s[i] == c[0]) || s[i] == '\0'))
+		{
+			j = 0;
+			word++;
+		}
+		if (s[i] != '\0')
+			i++;
+	}
+	return (word);
+}
+
 char	**ft_strsplit(char const *s, char c)
 {
 	char	**str;
+	int		words;
 	int		i;
-	int		word_count;
+	char	ch[1];
 
 	i = 0;
+	ch[0] = c;
 	if (s == NULL)
 		return (NULL);
-	word_count = ft_wordcount((char *)s, c);
-	if (!(str = (char **)malloc(sizeof(*str) * (word_count + 1))))
+	words = ft_wordcount(s, ch);
+	if (!(str = (char **)malloc(sizeof(*str) * (words + 1))))
 		return (NULL);
-	if (str[0] == '\0')
-		str[i] = ft_strsub((char *)s, 0, ft_wordlen((char *)s, c));
-	while (word_count-- && s[0] != '\0')
+	if (s[0] == '\0')
+		str[i] = ft_strsub(s, 0, ft_wordlen(s, c));
+	while (words-- && s[0] != '\0')
 	{
 		while (*s == c && *s)
 			s++;
-		str[i] = ft_strsub((char *)s, 0, ft_wordlen((char *)s, c));
-		s = s + ft_wordlen((char *)s, c);
+		str[i] = ft_strsub(s, 0, ft_wordlen(s, c));
+		s = s + ft_wordlen(s, c);
 		i++;
 	}
 	str[i] = NULL;

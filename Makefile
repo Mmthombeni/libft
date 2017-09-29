@@ -6,7 +6,7 @@
 #    By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/10 10:59:46 by mmthombe          #+#    #+#              #
-#    Updated: 2017/09/24 01:27:26 by mmthombe         ###   ########.fr        #
+#    Updated: 2017/09/28 20:45:42 by mmthombe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC = ft_strchr.c ft_strcat.c ft_strncat.c ft_strcmp.c ft_strncmp.c \
 	  ft_putstr.c ft_putstr_fd.c ft_putnbr.c ft_putnbr_fd.c ft_striter.c\
 	  ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c ft_strnew.c \
 	  ft_strjoin.c ft_strnequ.c ft_isspace.c ft_itoa.c ft_strtrim.c \
-	  ft_strsub.c ft_strsplit.c ft_wordcount.c ft_wordlen.c \
+	  ft_strsub.c ft_strsplit.c \
 
 OBJ = ft_strchr.o ft_strcat.o ft_strncat.o ft_strcmp.o ft_strncmp.o \
 	  ft_strcpy.o ft_strncpy.o ft_strdup.o ft_strstr.o ft_strnstr.o \
@@ -34,7 +34,7 @@ OBJ = ft_strchr.o ft_strcat.o ft_strncat.o ft_strcmp.o ft_strncmp.o \
 	  ft_putstr.o ft_putstr_fd.o ft_putnbr.o ft_putnbr_fd.o ft_striter.o \
 	  ft_striteri.o ft_strmap.o ft_strmapi.o ft_strequ.o ft_strnew.o \
 	  ft_strjoin.o ft_strnequ.o ft_isspace.o ft_itoa.o ft_strtrim.o \
-	  ft_strsub.o ft_strsplit.o ft_wordcount.o ft_wordlen.o\
+	  ft_strsub.o ft_strsplit.o \
 
 FLS = -Wall -Wextra -Werror
 

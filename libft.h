@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/01 14:35:07 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/09/24 02:08:24 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/09/28 20:43:57 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,6 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 int		ft_isspace(char c);
-
-int		ft_wordlen(char *s, char c);
-int		ft_wordcount(char *s, char c);
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
